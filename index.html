@@ -56,7 +56,7 @@
             var form_data = new FormData($('#upload-file')[0]);
             $.ajax({
                 type: 'POST',
-                url: 'http://hyeongwooeb-env.eba-3avisnjh.ap-northeast-2.elasticbeanstalk.com/fileupload',
+                url: 'https://hyeongwooeb-env.eba-3avisnjh.ap-northeast-2.elasticbeanstalk.com/fileupload',
                 data: form_data,
                 processData: false,
                 contentType: false,
@@ -70,7 +70,7 @@
         function getFiles() {
             $.ajax({
                 type: 'GET',
-                url: 'http://hyeongwooeb-env.eba-3avisnjh.ap-northeast-2.elasticbeanstalk.com/files',
+                url: 'https://hyeongwooeb-env.eba-3avisnjh.ap-northeast-2.elasticbeanstalk.com/files',
                 success: function (data) {
                     for(let i = 0 ; i < data['files'].length ; i++){
                         makeCard(data['files'][i]);
