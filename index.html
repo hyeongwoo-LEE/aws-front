@@ -66,8 +66,6 @@
                     location.reload();
                 },
             }).done(res=>{}).fail(error=>{
-                    console.log("실패");
-                    console.log(error);
                     console.log(error.responseJSON.data.content);
             });
         }
@@ -103,9 +101,6 @@
                 success: function (data) {
                     $("#count").html(data.count);
                 },
-            }).done(res=>{}).fail(error=>{
-                    console.log("실패");
-
             });
         }
     </script>
