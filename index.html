@@ -65,6 +65,12 @@
                     alert("파일이 업로드 되었습니다!!");
                     location.reload();
                 },
+                fail: function (error){
+                    console.log("실패");
+                    console.log(error);
+                    console.log(error.responseJSON.data.content);
+
+                }
             });
         }
 
@@ -99,9 +105,7 @@
                 success: function (data) {
                     $("#count").html(data.count);
                 },
-            }).done(res=>{
-            }).fail(error=>{ console.log(error);
-            });
+            })
         }
     </script>
 
