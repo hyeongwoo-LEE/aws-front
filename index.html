@@ -65,13 +65,11 @@
                     alert("파일이 업로드 되었습니다!!");
                     location.reload();
                 },
-                fail: function (error){
+            }).done(res=>{}).fail(error=>{
                     console.log("실패");
                     console.log(error);
                     console.log(error.responseJSON.data.content);
-
-                }
-            });
+            };
         }
 
         function getFiles() {
@@ -105,7 +103,10 @@
                 success: function (data) {
                     $("#count").html(data.count);
                 },
-            })
+            }).done(res=>{}).fail(error=>{
+                    console.log("실패");
+
+            };
         }
     </script>
 
