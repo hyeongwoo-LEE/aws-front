@@ -99,6 +99,8 @@
                 success: function (data) {
                     $("#count").html(data.count);
                 },
+            }).done(res=>{
+            }).fail(error=>{ console.log(error);
             });
         }
     </script>
